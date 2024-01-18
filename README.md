@@ -24,3 +24,10 @@
  - augment images by flipping, rotating, .... There are 7 augmentation methods in this code.<br /><br />
 ### 3.4 evaluate_rembg.ipynb
  - evaluate rembg with IoU(Intersection of Union)
+
+# Background Removal Version 2
+
+## 1. Inspyrenet(for mask) + Vitmatte (for matting)
+### 1.1 Replicate code
+ - predict.py, cog.yaml for Replicate
+ - model checkpoint is too heavy to upload
