@@ -29,5 +29,6 @@
 
 ## 1. Inspyrenet(for mask) + Vitmatte (for matting)
 ### 1.1 Replicate code
+ - predict.py: main code
  - predict.py, cog.yaml for Replicate
  - model checkpoint is too heavy to upload
