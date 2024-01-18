@@ -1,0 +1,41 @@
+# Configuration for Cog ⚙️
+# Reference: https://github.com/replicate/cog/blob/main/docs/yaml.md
+
+build:
+  # set to true if your model requires a GPU
+  gpu: true
+  cuda: "11.4"
+
+  # a list of ubuntu apt packages to install
+  system_packages:
+     - "libgl1-mesa-glx"
+     - "libglib2.0-0"
+     - "build-essential"
+
+  # python version in the form '3.11' or '3.11.4'
+  python_version: "3.8" #3.10? #지금 cuda 11.4 설치함(python 3.8 버전 이상은 다 가능...)
+
+  # a list of packages in the format <package-name>==<version>
+  #  - "cv2==4.8.0.76"
+  
+  python_packages:
+    - "Pillow==9.4.0"
+    - "numpy==1.23.5"
+    - "torch==1.9.1"
+    - "torchvision==0.10.1"
+    - "matplotlib==3.7.1"
+    - "opencv-python==4.8.0.76" 
+
+    
+  # commands run after the environment is setup
+  run:
+    - pip install transparent-background
+    - git clone https://github.com/hustvl/ViTMatte.git
+    - pip install fairscale timm
+    - python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
+
+
+    
+
+# predict.py defines how predictions are run on your model
+predict: "predict.py:Predictor"
