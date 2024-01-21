@@ -53,12 +53,12 @@
  - run SAM + Vitmatte (user input : points)
 
 ## 3. ETC (Trying other background removal/segmentation models)
-## 3.1 run_SAM.ipynb
-## 3.2 run_SAM_hq.ipynb 
-## 3.3 run_animal-image-matting-demo.ipynb 
-## 3.4 run_deeplabv3.ipynb
-## 3.5 run_fastsam_vitmatte(1).ipynb
-## 3.6 run_paddle_seg_gpu.ipynb
-## 3.7 run_tracer_b7_vitmatte(1).ipynb
-## 3.8 run_u2net_gan.ipynb
-## 3.9 run_yolo_sam.ipynb
+### 3.1 run_SAM.ipynb
+### 3.2 run_SAM_hq.ipynb 
+### 3.3 run_animal-image-matting-demo.ipynb 
+### 3.4 run_deeplabv3.ipynb
+### 3.5 run_fastsam_vitmatte(1).ipynb
+### 3.6 run_paddle_seg_gpu.ipynb
+### 3.7 run_tracer_b7_vitmatte(1).ipynb
+### 3.8 run_u2net_gan.ipynb
+### 3.9 run_yolo_sam.ipynb
