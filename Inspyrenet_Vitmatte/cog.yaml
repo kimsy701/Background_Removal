@@ -29,7 +29,7 @@ build:
     
   # commands run after the environment is setup
   run:
-    - pip install transparent-background
+    - pip install transparent-background==1.2.0
     - git clone https://github.com/hustvl/ViTMatte.git
     - pip install fairscale timm
     - python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
