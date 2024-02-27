@@ -27,16 +27,20 @@ import matplotlib.image as mpimg
 
 
 class Predictor(BasePredictor):
+
+    
     def setup(self):
         """Load the model into memory to make running multiple predictions efficient"""
         # self.model = torch.load("./weights.pth")
         pass
 
+
     def ispyrenet(self, input_image):
 
         # Load model
         remover = Remover() # default setting
-        ispyrenet_output = remover.process(input_image, threshold=0.5) # use threhold parameter for hard prediction.
+        #ispyrenet_output = remover.process(input_image, threshold=0.5) # use threhold parameter for hard prediction.
+        ispyrenet_output = remover.process(input_image)
         return ispyrenet_output
 
     
