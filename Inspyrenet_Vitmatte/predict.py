@@ -196,11 +196,12 @@ class Predictor(BasePredictor):
             image: the input image
             trimap: the input trimap
         """
-        output = model(input)['phas'].flatten(0, 2)
-        output = F.to_pil_image(output) #tensor to pil
+        with torch.no_grad():
+            output = model(input)['phas'].flatten(0, 2)
+            output = F.to_pil_image(output) #tensor to pil
 
-        #output.save(opj(save_dir))
-        #output.save(save_dir)
+            #output.save(opj(save_dir))
+            #output.save(save_dir)
 
 
         #return None
@@ -333,6 +334,8 @@ class Predictor(BasePredictor):
         foreground_alpha2 = self.run_vitmatte(vitmatte_model,input_image_arr,input_image_arr_RGBA, mask, erode_kernel_size, dilate_kernel_size, fg_box_threshold, fg_text_threshold, fg_caption, tr_box_threshold, tr_text_threshold, tr_caption)
 
         return foreground_alpha2
+
+
 
 
     def predict(
